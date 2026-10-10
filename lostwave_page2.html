@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lostwave.css">
+    <style>
+        body {
+            background-color: teal;
+            text-align: center;
+            border: 5px groove rgb(2, 3, 2);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            color: rgb(202, 245, 245);
+        }
+
+        #fex {
+            background-color: yellow;
+        }
+
+        #nv {
+            background-color: goldenrod;
+        }
+
+        #wsw {
+            background-color: pink;
+        }
+
+        #np {
+            background-color: maroon;
+        }
+
+        #bp {
+            background-color: navy;
+        }
+
+        #tb {
+            background-color: orange;
+        }
+
+        #panchiko {
+            background-color: turquoise;
+        }
+    </style>
+</head>
+
+
+<div class="container">
+    <button type="button" id="menu">☰</button>
+    <ul id="menu_list" class='hidden'>
+        <li> <a href="lostwave_page2.html">Треки</a>
+        </li>
+        <li> <a href="lostwave_page3.html">Информация про поиск</a>
+        </li>
+    </ul>
+</div>
+
+<header>
+    <button type="button" id="light" onclick="change_bgColor1()">🌞</button>
+    <button type="button" id="night"onclick="change_bgColor2()">🌑</button>
+</header>
+
+<body>
+    <nav>
+        <a href="lostwave.html">Главная</a>
+
+        <a href="lostwave_page2.html">Треки</a>
+
+        <a href="lostwave_page3.html">Информация про поиск</a>
+    </nav>
+    <h1>Треки</h1>
+    <h2 id="fex">FEX</h2>
+
+    <figure>
+        <figcaption>Subways Of Your Mind</figcaption>
+        <audio controls src="Fex_Subways_Of_Your_Mind.mp3"></audio>
+    </figure>
+
+    <h2 id="nv">Наталья Верич</h2>
+
+    <figure2>
+        <figcaption>Мой Блуждающий Огонь</figcaption>
+        <audio controls src="nataliya_verich_mbo.mp3"></audio>
+    </figure2>
+
+    <h2 id="wsw">Who's Who?</h2>
+
+
+    <figure5>
+        <figcaption>Ulterior Motives</figcaption>
+        <audio controls src="wsw_ulterior_motives.mp3"></audio>
+    </figure5>
+
+    <h2 id="np">Ну, погоди!</h2>
+
+    <figure5>
+        <figcaption>"Урна"</figcaption>
+        <audio controls src="urna_nu_pugodi.mp3"></audio>
+    </figure5>
+
+    <h2 id="bp">Big Picture</h2>
+
+    <figure5>
+        <figcaption>Just Passin' By</figcaption>
+        <audio controls src="big_picture_just_passin_by.mp3"></audio>
+    </figure5>
+
+    <h2 id="tb">The Burns</h2>
+
+    <figure5>
+        <figcaption>Avail</figcaption>
+        <audio controls src="the_burns_avail.mp3"></audio>
+    </figure5>
+
+    <h2 id="panchiko">Panchiko</h2>
+
+    <figure5>
+        <figcaption>D>E>A>T>H>M>E>T>A>L</figcaption>
+        <audio controls src="panchiko_deathmetal.mp3"></audio>
+    </figure5>
+
+</body>
+<script>
+    var change_bgColor1 = function () {
+        document.body.style.backgroundColor = "teal";
+        document.body.style.color = "rgb(61, 77, 95";
+        var h1_color = document.getElementById("main-heading");
+        console.log(h1_color);
+        h1_color.style.color = "rgb(68, 158, 29)";
+    }
+    var change_bgColor2 = function () {
+        document.body.style.backgroundColor = "rgb(5, 39, 81)";
+        document.body.style.color = "rgb(123, 147, 173)";
+        var h1_color = document.getElementById("main-heading");
+        console.log(h1_color);
+        h1_color.style.color = "rgb(44, 135, 67)";
+    }
+
+    const button = document.getElementById('menu');
+    console.log(button);
+    const menu = document.getElementById('menu_list');
+    button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        console.log(menu);
+    })
+</script>
+
+</html>
